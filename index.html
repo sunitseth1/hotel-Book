@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            /* display: block; */
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    
+}
+body {
+ /* display:block; */
+    margin: auto;
+    border: solid 2px #0094ff;
+    font-size: 15px;
+    font-family: Verdana;
+    background-color: #dffe91;
+}
+
+header {
+    margin: auto;
+    border: solid 2px #0094ff;
+    font-size: 15px;
+    font-family: Verdana;
+    background-color: #dffe91;
+}
+header .div2 nav{
+    display: flex;
+    width: 40%;
+    height: 10%;
+    margin: 3%;
+    /* border: 1px solid #fff; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 0px 0px 300px;
+
+ }
+ header .div2 nav ul{
+    display: flex;
+ }
+ header .div2 nav ul li{
+    display: flex;
+    position: relative;
+    list-style-type: none;
+    font-size: 15px;
+    color: #4c5262;
+    margin-left: 120px;
+    cursor: pointer;
+    transition: .3s linear;
+ }
+ header .div2 nav ul li:hover{
+   color: rgb(26, 105, 196);
+ }
+ header .div2 nav ul li span{
+   position: absolute;
+   width: 100%;
+   height: 2.5px;
+   bottom: -1px;
+   left: 0;
+   border-radius: 20px;
+ }
+ header .div2 nav .search{
+   position:absolute;
+   margin-left:32% ;
+   /* width: 4%; */
+   padding: 10px 0px 0px;
+   /* border-radius: 4px; */
+   /* color: rgb(234, 169, 169); */
+ }
+ header .div2 nav .search::before{
+     content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   border-radius: 20px;
+   background: rgb(184, 184, 184,.1);
+   backdrop-filter: blur(5px);
+   z-index: -1;
+ }
+ header .div2 nav .search .bi{
+    font-size: 20px;
+    padding: 3px 0px 0px 300px;
+ }
+ header .div2 nav .search input{
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0px 10px;
+    color: rgb(67, 62, 62);
+    font-size: 12px;
+ }
+ header .div2 nav .user{
+    position:absolute;
+    width: 30px;
+    margin-left: 74%;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -90px;
+ }
+ header .div2 nav .user img{
+    display: flex;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px #131312;
+    margin-left: 30px;
+ }
+ header .div3 {
+    /* display: ; */
+    position:relative;
+    width: 70px;
+    height: 30px;
+    border-radius: 10%;
+    box-shadow: 2px 2px 8px #131312;
+    background-color: #e89d1c;
+    /* padding: 0px 10px; */
+
+    
+    
+ }
+header .roomsay{
+    position: absolute;
+    width: 10px;
+    padding: 3px 0px 0px 200px;
+}
+header .div3:hover{
+   background-color: rgb(216, 232, 176);
+
+ }
+ header .divO{
+    /* padding: 3px 0px 0px 0px; */
+    /* margin: flex; */
+    margin-left: 302%;
+    /* border: solid 2px #0094ff; */
+    font-size: 10px;
+    font-family: Verdana;
+    background-color: #dffe91;
+ }
+ header .div4{
+    width: 40%;
+    height: 10%;
+    margin: 2%;
+    /* border: 1px solid #fff; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+ }
+ header  .popular_song {
+     width: 100%;
+
+     height: auto;
+     /* border: 1px solid #fff; */
+     margin: auto;
+     margin-top: 15px;
+ }
+ header  .popular_song .h4{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ header  .popular_song .h4 .bi{
+    color: #a4a8b4;
+    cursor: pointer;
+    transition: .3s linear;
+ }
+ header  .popular_song .h4 .bi:hover{
+    color: #fff;
+ }
+/* .hotelItem {
+     width: 10%;
+
+     height: auto;
+     
+     margin: auto;
+     margin-top: 15px;
+ } */
+ header  .popular_song .pop_song {
+     width: 100%;
+     height: 280px;
+     margin-top: 20px;
+     display: flex;
+     overflow-x: auto;
+     scroll-behavior: smooth;
+ }
+ header  .popular_song .pop_song::-webkit-scrollbar{
+     display: none;
+ }
+ header  .popular_song .pop_song li{
+     min-width: 250px;
+     min-height: 150px;
+     list-style-type: none;
+     margin-right: 10px;
+     transition: .3s linear;
+ }
+ header  .popular_song .pop_song li:hover{
+     background: rgb(105, 105, 170,.1);
+ }
+ header  .popular_song .pop_song li .img_play{
+    position: relative;
+    width: 200px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ header  .popular_song .pop_song li .img_play img{
+   width: 100%;
+   height: 100%;
+ }
+ header .popular_song .pop_song li .img_play .bi{
+   position: absolute;
+   font-size: 20px;
+   cursor: pointer;
+   transition: .3s linear;
+   opacity: 0;
+ }
+ header .popular_song .pop_song li .img_play:hover .bi{
+   opacity: 1;
+ }
+ header  .popular_song .pop_song li h5{
+   padding: 5px 0px 0px 5px;
+   line-height: 15px;
+   font-size: 10px;
+ }
+ header  .popular_song .pop_song li h5 .subtitle{
+   font-size: 9px;
+   color: #4c5262;
+ }
+header .center{
+    width: 100%;
+     height: 350px;
+     display:flex;
+     overflow-x: auto;
+     /* position: relative; */
+}
+ header .center1{
+   
+    width: 450%;
+     height: 320px;
+     margin-top: 20px;
+     display: flex;
+     overflow-x: hidden;
+     margin-left: 30%;
+}
+header .center2{
+    position:absolute;
+    color: azure;
+    width: 35%;
+     height: 250px;
+     margin-top: 100px;
+     display: -ms-flexbox;
+     overflow-x: auto;
+     margin-left: 35%;
+} 
+header .btn2{
+    display: flex;
+    position:relative;
+    width: 70px;
+    height: 35px;
+    border-radius: 10%;
+    box-shadow: 2px 2px 8px #131312;
+    background-color: #a0b4f6;
+    margin-left: 43%;
+    margin-top: 40px;
+}
+header .btn2:hover{
+   background-color: rgb(249, 96, 96);
+
+ }
+ header .main{
+    width: 100%;
+     height: 350px;
+     display:flex;
+     overflow-x: auto;
+ }
+ header .div6{
+  height: 100px;
+  width: 17%;
+  margin-left: 50px;
+  margin-right: 10px;
+ }
+ header .div7{
+  height: 100px;
+  width: 17%;
+  margin-right: 10px;
+  margin-left: 10px;
+ }
+ header .div8{
+  height: 100px;
+  width: 17%;
+  margin-right: 10px;
+  margin-left: 10px;
+ }
+ header .div9{
+  height: 100px;
+  width: 17%;
+  margin-right: 10px;
+  margin-left: 10px;
+ }
+ header .div10{
+  height: 100px;
+  width: 17%;
+  margin-left: 10px;
+  margin-right: 50px;
+ }
+ header .btn3{
+    display: flex;
+    position:relative;
+    width: 70px;
+    height: 20px;
+    border-radius: 5%;
+    box-shadow: 2px 2px 8px #131312;
+    background-color: #c5cadc;
+    margin-left: 35%;
+    margin-top: 40px;
+ }
+ header .btn3:hover{
+   background-color: rgb(249, 96, 96);
+ }
+ header .div9  .search1{
+   position: relative;
+   width: 40%;
+   padding: 15px 10px;
+   border-radius: 40px;
+   color: rgb(234, 169, 169);
+ }
+ header .div9 nav .search1::before{
+     content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   border-radius: 20px;
+   background: rgb(184, 184, 184,.1);
+   backdrop-filter: blur(5px);
+   z-index: -1;
+   
+ }
+ header .div9 .search1 .bi{
+    font-size: 20px;
+    padding: 3px 0px 0px 30px;
+   
+ }
+ header .div9 .search1 input{
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0px 10px;
+    color: rgb(223, 137, 24);
+    font-size: 12px;
+ }
+ 
+.dropbtn1 {
+  background-color: #141714;
+  color: rgb(255, 255, 255);
+  padding: 16px;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown1 {
+  position:absolute;
+    top: 6%;
+   left: 5%;
+   transform: translate(-50%, -50%);
+   color: aliceblue;
+   font-size: 150%;
+}
+
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content1 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content1 a:hover {background-color: #d8e942}
+
+.dropdown1:hover .dropdown-content1 {
+  display: block;
+}
+
+/* .dropdown1:hover .dropbtn1 {
+  background-color: #3e8e41;
+} */
+
+
+.dropbtn3 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown3 {
+  position:absolute;
+    top: 6%;
+   left: 20.51%;
+   transform: translate(-50%, -50%);
+   color: aliceblue;
+   font-size: 150%;
+}
+.dropdown-content3 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content3 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content3 a:hover {background-color: #d8e942}
+
+.dropdown3:hover .dropdown-content3 {
+  display: block;
+}
+.dropdown3:hover .dropbtn3 {
+  background-color: #3e8e41;
+}
+
+.dropbtn2 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown2 {
+  position:absolute;
+    top: 6%;
+   left: 12.5%;
+   transform: translate(-50%, -50%);
+   color: aliceblue;
+   font-size: 150%;
+}
+
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content2 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content2 a:hover {background-color: #d8e942}
+
+.dropdown2:hover .dropdown-content2 {
+  display: block;
+}
+
+.dropdown2:hover .dropbtn2 {
+  background-color: #3e8e41;
+}
+
+header .div9 .search1 input{
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0px 10px;
+    color: rgb(223, 137, 24);
+    font-size: 12px;
+ }
+ 
+.dropbtn4 {
+  background-color: #4CAF50;
+  color: rgb(255, 255, 255);
+  padding: 16px;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown4 {
+  position:absolute;
+    top: 6%;
+   left: 27.53%;
+   transform: translate(-50%, -50%);
+   color: aliceblue;
+   font-size: 150%;
+}
+
+.dropdown-content4 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content4 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content4 a:hover {background-color: #d8e942}
+
+.dropdown4:hover .dropdown-content4 {
+  display: block;
+}
+
+.dropdown4:hover .dropbtn4 {
+  background-color: #3e8e41;
+}
+/* .inter{
+  
+    margin: flex;
+    border: solid 2px #0094ff;
+    font-size: 10px;
+    font-family: Verdana;
+    background-color: #dffe91;
+} */
+
+
+
+
+@media only screen and (max-width: 764px) {
+    body {
+    margin: flex;
+    border: solid 2px #0094ff;
+    font-size: 10px;
+    font-family: Verdana;
+    background-color: #dffe91;
+}
+.dropbtn1 {
+  background-color: #111211;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown1 {
+  position:absolute;
+    top: 3%;
+   left: 6.53%;
+   transform: translate(-50%, -50%);
+   color: aliceblue;
+   font-size: 150%;
+}
+.dropbtn2 {
+  background-color: #4CAF50;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown2 {
+  position:absolute;
+    top: 3%;
+   left: 20%;
+   transform: translate(-50%, -50%);
+   color: aliceblue;
+   font-size: 150%;
+}
+.dropbtn3 {
+  background-color: #4CAF50;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown3 {
+  position:absolute;
+    top: 3%;
+   left: 35%;
+   transform: translate(-50%, -50%);
+   color: aliceblue;
+   font-size: 150%;
+}
+.dropbtn4 {
+  background-color: #4CAF50;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown4 {
+  position:absolute;
+    top: 3%;
+   left:48%;
+   transform: translate(-50%, -50%);
+   color: aliceblue;
+   font-size: 150%;
+}
+
+
+/* .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+} */
+header {
+    margin: auto;
+    border: solid 2px #0094ff;
+    font-size: 10px;
+    font-family: Verdana;
+    background-color: #dffe91;
+}
+header .div2 nav{
+    display: flex;
+    width: 20%;
+    height:5%;
+    margin: 3%;
+    /* border: 1px solid #fff; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px 0px 0px;
+
+ }
+ header .div2 nav ul{
+    display: flex;
+    
+ }
+ header .div2 nav ul li{
+    display: flex;
+    position: relative;
+    list-style-type: none;
+    font-size: 10px;
+    color: #4c5262;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .3s linear;
+    padding: 0px 0px 5px 5px;
+ }
+ header .div2 nav ul li:hover{
+   color: rgb(26, 105, 196);
+ }
+ header .div2 nav ul li span{
+   position: absolute;
+   width: 100%;
+   height: 2.5px;
+   bottom: -1px;
+   left: 0;
+   border-radius: 20px;
+ }
+ header .div2 nav .search{
+   position: relative;
+   width: 10%;
+   padding:10px 10px;
+   border-radius: 10px;
+   color: rgb(234, 169, 169);
+   /* position:absolute; */
+    /* width: 30px; */
+    /* height: 30px; */
+    margin-left: -100px;
+    /* border-radius: 50%; */
+    margin-top: 10px;
+    /* cursor: pointer; */
+   /* left:48%; */
+ }
+ header .div2 nav .search::before{
+     content: '';
+   position: absolute;
+   width: 30%;
+   height: 30%;
+   border-radius: 5px;
+   background: rgb(184, 184, 184,.1);
+   backdrop-filter: blur(5px);
+   z-index: -1;
+  
+ }
+ header .div2 nav .search .bi{
+    font-size: 2px;
+    padding: 0px;
+     /* left:48%; */
+ }
+ header .div2 nav .search input{
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0px 10px;
+    color: rgb(67, 62, 62);
+    font-size: 12px;
+    /* left:48%; */
+   padding: 40px;
+  font-size: 10px;
+ }
+ header .div2 nav .user{
+    position:absolute;
+    width: 30px;
+    height: 30px;
+    margin-left: 260px;
+    border-radius: 50%;
+    margin-top: -100px;
+    cursor: pointer;
+   
+ }
+ header .div2 nav .user img{
+    display: flex;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px #131312;
+    margin-left: 30px;
+    /* left:48%; */
+ }
+ header .div3 {
+    /* display: ; */
+    position:relative;
+    width: 70px;
+    height: 30px;
+    border-radius: 10%;
+    box-shadow: 2px 2px 8px #131312;
+    background-color: #e89d1c;
+    /* padding: 0px 10px; */
+    left:48%;
+
+    
+    
+ }
+header .roomsay{
+    position: absolute;
+    width: 5px;
+    padding: 0px 0px 0px 3px;
+}
+header .div3:hover{
+   background-color: rgb(216, 232, 176);
+
+ }
+ header .divO{
+    /* padding: 0px 20px 0px 90px; */
+     /* padding: 3px 0px 0px 0px; */
+    /* margin: flex; */
+    /* margin-left: 108%; */
+    /* border: solid 2px #0094ff; */
+    font-size: 10px;
+    margin-left: 180px;
+    margin-top: -100px;
+    font-family: Verdana;
+    background-color: #dffe91;
+ }
+ header .div4{
+    width: 10%;
+    height: 5%;
+    margin: 2%;
+    /* border: 1px solid #fff; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+ }
+ header  .popular_song {
+     width: 100%;
+
+     height: auto;
+     /* border: 1px solid #fff; */
+     margin: auto;
+     margin-top: 15px;
+ }
+ header  .popular_song .h4{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ header  .popular_song .h4 .bi{
+    color: #a4a8b4;
+    cursor: pointer;
+    transition: .3s linear;
+ }
+ header  .popular_song .h4 .bi:hover{
+    color: #fff;
+ }
+
+ header  .popular_song .pop_song {
+     width: 100%;
+     height: 250px;
+     margin-top: 20px;
+     display: flex;
+     overflow-x: auto;
+     scroll-behavior: smooth;
+ }
+ header  .popular_song .pop_song::-webkit-scrollbar{
+     display: none;
+ }
+ header  .popular_song .pop_song li{
+     min-width: 250px;
+     min-height: 150px;
+     list-style-type: none;
+     margin-right: 10px;
+     transition: .3s linear;
+ }
+ header  .popular_song .pop_song li:hover{
+     background: rgb(105, 105, 170,.1);
+ }
+ header  .popular_song .pop_song li .img_play{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ header  .popular_song .pop_song li .img_play img{
+   width: 100%;
+   height: 100%;
+ }
+ header .popular_song .pop_song li .img_play .bi{
+   position: absolute;
+   font-size: 20px;
+   cursor: pointer;
+   transition: .3s linear;
+   opacity: 0;
+ }
+ header .popular_song .pop_song li .img_play:hover .bi{
+   opacity: 1;
+ }
+ header  .popular_song .pop_song li h5{
+   padding: 5px 0px 0px 5px;
+   line-height: 15px;
+   font-size: 10px;
+ }
+ header  .popular_song .pop_song li h5 .subtitle{
+   font-size: 9px;
+   color: #4c5262;
+ }
+header .center{
+    width: 85%;
+     height: 280px;
+     display:flex;
+     overflow-x: auto;
+     position: relative;
+}
+ header .center1{
+   
+    width: 150%;
+     height: 200px;
+     margin-top: 5px;
+     display: flex;
+     overflow-x: hidden;
+     margin-left: 15%;
+}
+header .center2{
+    position:absolute;
+    color: azure;
+    width:80%;
+     height: 180px;
+     margin-top: 10px;
+     display:block;
+     overflow-x: auto;
+     margin-left: 19%;
+     /* text-size-adjust: 0px; */
+     text-align: center;
+     
+} 
+header .btn2{
+    display: flex;
+    position:relative;
+    width: 70px;
+    height: 35px;
+    border-radius: 10%;
+    box-shadow: 2px 2px 8px #131312;
+    background-color: #a0b4f6;
+    margin-left: 37%;
+    margin-top: 10px;
+}
+header .btn2:hover{
+   background-color: rgb(249, 96, 96);
+
+ }
+ header .main{
+    width: 400%;
+     height: 350px;
+     display:contents;
+     overflow-x: auto;
+ }
+ header .div6{
+  height: 130px;
+  width: 25%;
+  margin-left: 20px;
+  /* margin-right: 10px; */
+ }
+ header .div7{
+  height: 90px;
+  width: 25%;
+  /* margin-right: 20px; */
+  margin-left: 20px;
+ }
+ header .div8{
+  height: 150px;
+  width: 25%;
+  /* margin-right: 10px; */
+  margin-left: 20px;
+ }
+ header .div9{
+  height: 150px;
+  width: 25%;
+  /* margin-right: 10px; */
+  margin-left: 20px;
+ }
+ header .div10{
+  height: 150px;
+  width: 25%;
+  margin-left: 20px;
+  /* margin-right: 50px; */
+ }
+ header .btn3{
+    display: flex;
+    position:relative;
+    width: 70px;
+    height: 20px;
+    border-radius: 5%;
+    box-shadow: 2px 2px 8px #131312;
+    background-color: #c5cadc;
+    margin-left: 30%;
+    margin-top: 130px;
+ }
+
+ }
+
+    </style>
+</head>
+<body>
+    <header>
+    <div class="div1">
+        <div class="div2">
+        <!-- <h1 class="roomsay">Roomsy</h1> -->
+        <nav>
+            <!-- <div class="dropdown"> -->
+                <!-- <button></button> -->
+                <a href="#">
+            <div class="dropdown1">
+                <button class="dropbtn1">Roomsy</button>
+                <div class="dropdown-content1">
+               
+                </div>
+              </div>
+            </a>
+            <div class="dropdown">
+            <a href="#">
+                <div></div>
+              <div class="dropdown2">
+                <button class="dropbtn2">Discover</button>
+                <div class="dropdown-content2">
+                <a href="#">@</a>
+                <a href="#">@</a>
+                <a href="#">@</a>
+                </div>
+              </div>
+            </a>
+
+              <a href="#">
+              <div class="dropdown3">
+                <button class="dropbtn3">My Libary</button>
+                <div class="dropdown-content3">
+                <a href="#">@</a>
+                <a href="#">@</a>
+                <a href="#">@</a>
+                </div>
+              </div>
+            </a>
+
+              <a href="#">
+              <div class="dropdown4">
+                <button class="dropbtn4">Radio</button>
+                <div class="dropdown-content4">
+                <a href="#">@</a>
+                <a href="#">@</a>
+                <a href="#">@</a>
+                </div>
+              </div>
+            </a>
+</div>
+         <!-- <div class="inter"> -->
+            <!-- <div class="search">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Search Hotel...">
+            </div> -->
+            <div class="divO">
+                <form action="login.html">
+                <button class="div3" onclick="clickMe()">Sing in</button>
+            </form>
+                </div>
+            <div class="user">
+                <img src="https://media.licdn.com/dms/image/C4D03AQF3plBEq-CDjg/profile-displayphoto-shrink_800_800/0/1667969079950?e=1681948800&v=beta&t=USTyTTVfcsYYueAnEIOobQyNTWzTWJWRR4wu2cOGEPo" alt="User" title="Sunit_Seth">
+            </div>
+            <div class="search">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Search Hotel...">
+            </div>
+            <!-- </div> -->
+        </nav>
+    </div>
+</div>
+        <!-- <div class="div4"> 
+            <form action="">
+            <p>Location</p>
+            </form>
+            <h1></h1>
+        </div> -->
+        <div class="popular_song">
+            <div class="h4">
+                <h4>Five Star Hotel</h4>
+                <div class="btn_s">
+                    <i id="left_scroll" class="bi bi-arrow-left-short"></i>
+                    <i id="right_scroll" class="bi bi-arrow-right-short"></i>
+                </div>
+            </div>
+            <div class="pop_song">
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="https://thumbs.dreamstime.com/b/hotel-13341433.jpg" alt="alan">
+                    
+                        <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
+                    </button>
+                    </form>
+                    </div>
+                    <h5>The Oberoi Udaivilas
+                        <br>
+                        <div class="subtitle">Udaipur, India</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="https://m.economictimes.com/thumb/msid-89465809,width-1254,height-836,resizemode-4,imgsize-28786/indian-hotels.jpg" alt="alan">
+                        <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                        <!-- change All id  -->
+                    </button>
+                    </form>
+                    </div>
+                    <h5>The Lodhi New Delhi
+                        <br>
+                        <div class="subtitle">New Delhi, India </div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="https://media.istockphoto.com/id/104731717/photo/luxury-resort.jpg?s=612x612&w=0&k=20&c=cODMSPbYyrn1FHake1xYz9M8r15iOfGz9Aosy9Db7mI=" alt="alan">
+                        <i class="bi playListPlay bi-play-circle-fill" id="9"></i>
+                    </button>
+                </form>
+                    </div>
+                    <h5>Taj Mahal Hotel
+                        <br>
+                        <div class="subtitle">New Delhi, India</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2022/04/12/1329/MUMGH-P0765-Inner-Courtyard-Hotel-Exterior-Evening.jpg/MUMGH-P0765-Inner-Courtyard-Hotel-Exterior-Evening.16x9.jpg" alt="alan">
+                        <i class="bi playListPlay bi-play-circle-fill" id="10"></i>
+                    </button>
+                </form>
+                    </div>
+                    <h5>The Leela Palace
+                        <br>
+                        <div class="subtitle">Udaipur, India</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="https://thumbs.dreamstime.com/b/hotel-10732347.jpg" alt="alan">
+                        <i class="bi playListPlay bi-play-circle-fill" id="11"></i>
+                    </button>
+                </form>
+                    </div>
+                    <h5>Taj Lake Palace
+                        <br>
+                        <div class="subtitle">Udaipur, India </div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="https://m.economictimes.com/thumb/msid-73023854,width-1200,height-900,resizemode-4,imgsize-235513/hotel-agencies.jpg" alt="alan">
+                        <i class="bi playListPlay bi-play-circle-fill" id="12"></i>
+                    </button>
+                </form>
+                    </div>
+                    <h5> Umaid Bhawan Palace
+                        <br>
+                        <div class="subtitle">Jodphur, India</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="http://res.cloudinary.com/simpleview/image/upload/v1565904136/clients/fortworth/RH_DFWDT_CLBL_DBL_a691450d-410a-40eb-8a1b-ae94d10486ca.jpg" alt="alan">
+                        <i class="bi playListPlay bi-play-circle-fill" id="13"></i>
+                    </button>
+                </form>
+                    </div>
+                    <h5>The Leela Palace New
+                        <br>
+                        <div class="subtitle">New Delhi, India</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="https://m.economictimes.com/thumb/msid-73023854,width-1200,height-900,resizemode-4,imgsize-235513/hotel-agencies.jpg" alt="alan">
+                        <i class="bi playListPlay bi-play-circle-fill" id="14"></i>
+                    </button>
+                </form>
+                    </div>
+                    <h5>Taj Falaknuma Palace
+                        <br>
+                        <div class="subtitle">Hyderabad, India</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="   https://cf.bstatic.com/xdata/images/hotel/max1024x768/386516730.jpg?k=010021c4b79cf89b87e870b394f725293dc1b4d422a19c1da36869aebcc63904&o=&hp=1 " alt="alan">
+                        <i class="bi playListPlay bi-play-circle-fill" id="15"></i>
+                    </button>
+                </form>
+                    </div>
+                    <h5>The Oberoi Rajvilas
+                        <br>
+                        <div class="subtitle">Jaipur, India</div>
+                    </h5>
+                </li>
+            </div>
+        </div>
+        <div class="popular_song">
+            <div class="h4">
+                <h4>Four Star Hotel</h4>
+                <div class="btn_s">
+                   
+                    <i id="left_scroll" class="bi bi-arrow-left-short"></i>
+                    <i id="right_scroll" class="bi bi-arrow-right-short"></i>
+                </div>
+            </div>
+            <div class="pop_song">
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="https://www.eroshotels.co.in/wp-content/uploads/2018/04/superior-room-home-page.jpg" alt="alan">
+                        <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
+                    </button>
+                </form>
+                    </div>
+                    <h5>The Taj Mahal Palace
+                        <br>
+                        <div class="subtitle">Mumbai Maharashtra, India</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="https://cdn.britannica.com/96/115096-050-5AFDAF5D/Bellagio-Hotel-Casino-Las-Vegas.jpg" alt="alan">
+                        <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </button>
+                </form>
+                        <!-- change All id  -->
+                    </div>
+                    <h5>Rambagh Palace
+                        <br>
+                        <div class="subtitle">Jaipur, India</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="https://ellaahotel.com/wp-content/uploads/2022/03/Group-53.jpg" alt="alan">
+                        <i class="bi playListPlay bi-play-circle-fill" id="9"></i>
+                    </button>
+                </form>
+                    </div>
+                    <h5> The Oberoi New Delhi
+                        <br>
+                        <div class="subtitle">New Delhi, India</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="https://www.tajhotels.com/content/dam/tajhotels/ihcl/vivanta/vivanta_sikkim_ihcl.jpg" alt="alan">
+                        <i class="bi playListPlay bi-play-circle-fill" id="10"></i>
+                    </button>
+                </form>
+                    </div>
+                    <h5>Four Seasons Hotel
+                        <br>
+                        <div class="subtitle">Mumbai, India</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/366859091.jpg?k=9ed66fd392a004c8c5368b7638309ec962527e6548afec605849c1d193c70001&o=&hp=1" alt="alan">
+                        <i class="bi playListPlay bi-play-circle-fill" id="11"></i>
+                    </button>
+                </form>
+                    </div>
+                    <h5>The St. Regis Mumbai
+                        <br>
+                        <div class="subtitle">Mumbai, India</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7Fa3bNIJp_GSHvRPh5uOHV-8wjesV0sQzNw&usqp=CAU" alt="alan">
+                        <i class="bi playListPlay bi-play-circle-fill" id="12"></i>
+                    </button>
+                </form>
+                    </div>
+                    <h5>Ritz Carlton Bangalore
+                        <br>
+                        <div class="subtitle">Bangalore, India</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJmZGrhSNR2TSUJwineCy-OL84U1mjJNTyJQ&usqp=CAU" alt="alan">
+                        <i class="bi playListPlay bi-play-circle-fill" id="13"></i>
+                    </button>
+                </form>
+                    </div>
+                    <h5>The Oberoi Gurgaon
+                        <br>
+                        <div class="subtitle">Gurgaon, India</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuhqfgGGecvELsPkLLY8ArjwwctzAB3-z-Hw&usqp=CAU" alt="alan">
+                        <i class="bi playListPlay bi-play-circle-fill" id="14"></i>
+                    </button>
+                </form>
+                    </div>
+                    <h5> Fairmont Jaipur
+                        <br>
+                        <div class="subtitle">Jaipur, India</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">
+                        <form action="hotel1.html"><button>
+                        <img class="hotelItem" src="https://www.gingerhotels.com/resourcefiles/hotelprofile/ginger-vapi-hotel-th.jpg?version=12172022122611" alt="alan">
+                        <i class="bi playListPlay bi-play-circle-fill" id="15"></i>
+                    </button>
+                </form>
+                    </div>
+                    <h5>The Raj Palace
+                        <br>
+                        <div class="subtitle">Jaipur, Rajasthan, India</div>
+                    </h5>
+                </li>
+            </div>
+        </div>
+        <div class="center">
+            <div class="center1">
+        <img src="https://www.itchotels.com/content/dam/itchotels/in/umbrella/images/headmast-desktop/welcomhotel-bhubaneswar.jpg" alt="">    
+    </div>
+    <div class="center2"> 
+        <h1>Thoughtfully desingned homes</h1>
+            <h1>Exceptional hosts Verified for quality.</h1>
+            <p>Every home is verified through in person quality 
+            inspection to ensure quality and desing Just look  for 
+            the PRO badge</p> 
+            <form action="pro.html">
+            <button class="btn2">Get PRO</button>
+        </form>
+        </div>
+      </div>
+      <div class="popular_song">
+        <div class="h4">
+            <h4>Three Star Hotel</h4>
+            <div class="btn_s">
+                <i id="left_scroll" class="bi bi-arrow-left-short"></i>
+                <i id="right_scroll" class="bi bi-arrow-right-short"></i>
+            </div>
+        </div>
+        <div class="pop_song">
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://media.gettyimages.com/id/1333257932/photo/digitally-generated-image-of-the-luxurious-hotel-lobby.jpg?s=612x612&w=gi&k=20&c=7VWO0GX3BhfpPJW9BNnaMWEbCHZqfBNq--ccjw2Z8mk=" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
+                </button>
+            </form>
+                </div>
+                <h5>Four Seasons Bengaluru
+                    <br>
+                    <div class="subtitle">Alan Walker</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTimgFyJTQ2c4JolnAYPa6x3kQQGKo5oRqqGQ&usqp=CAU" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                </button>
+            </form>
+                    <!-- change All id  -->
+                </div>
+                <h5>Sofitel Mumbai BKC
+                    <br>
+                    <div class="subtitle">Mumbai, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_5061RhtPIYGA36EqCrRuVyvwshnTUhs_WQ&usqp=CAU" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="9"></i>
+                </button>
+            </form>
+                </div>
+                <h5>The Leela Palace
+                    <br>
+                    <div class="subtitle">Chennai, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://media.gettyimages.com/id/1077111606/photo/luxury-five-stars-hotels-lobby.jpg?s=612x612&w=gi&k=20&c=7XD7nX7GdwVlpEe4n0wwHKiq-tOPQTLBFdkrAK3pnfs=" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="10"></i>
+                </button>
+            </form>
+                </div>
+                <h5>The Leela Ambience
+                    <br>
+                    <div class="subtitle">Delhi, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAwtd9oIYH9M68kvO8N8JcQ_aFtvTBvJUcYw&usqp=CAU" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="11"></i>
+                </button>
+            </form>
+                </div>
+                <h5>Park Hyatt Chennai
+                    <br>
+                    <div class="subtitle">Chennai, Tamil Nadu, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSycHOMPfIH3dh7SxqH9m7AQXU6SrCyM80r9A&usqp=CAU" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="12"></i>
+                </button>
+            </form>
+                </div>
+                <h5>Alila Diwa Goa
+                    <br>
+                    <div class="subtitle">Goa, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxJjefNgtYq87S_3DVsnj8QDn9c55HNTEkJg&usqp=CAU" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="13"></i>
+                </button>
+            </form>
+                </div>
+                <h5>ITC Grand Bharat
+                    <br>
+                    <div class="subtitle">Gurgaon, Haryana, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq_Nmd2rB6XJzE-5YLoas9TYBYEYj3E9CzwA&usqp=CAU" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="14"></i>
+                </button>
+            </form>
+                </div>
+                <h5> Swissotel Kolkata
+                    <br>
+                    <div class="subtitle">Kolkata, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZEBa5m0jBT7vfzZsCewJN0F2RoVRuoZgThA&usqp=CAU" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="15"></i>
+                </button>
+            </form>
+                </div>
+                <h5>The Oberoi Sukhvilas Spa Resort
+                    <br>
+                    <div class="subtitle">New Chandigarh, District - S.A.S Nagar, India</div>
+                </h5>
+            </li>
+        </div>
+    </div>
+    <div class="popular_song">
+        <div class="h4">
+            <h4>Two Star Hotel</h4>
+            <div class="btn_s">
+             
+                <i id="left_scroll" class="bi bi-arrow-left-short"></i>
+                <i id="right_scroll" class="bi bi-arrow-right-short"></i>
+            </div>
+        </div>
+        <div class="pop_song">
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP_XxfQDKkPAi3LOMCu6hw6KwgJZaWPvw96Q&usqp=CAU" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
+                </button>
+            </form>
+                </div>
+                <h5>Roseate House New Delhi Airport
+                    <br>
+                    <div class="subtitle">New Delhi, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://cdn.pixabay.com/photo/2014/07/10/17/17/hotel-389256__340.jpg" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                </button>
+            </form>
+                    <!-- change All id  -->
+                </div>
+                <h5> RAAS Jodphur
+                    <br>
+                    <div class="subtitle">Jodphur, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://www.maurya.com/wp-content/uploads/2018/01/oriental-suite-maurya-patna-featured-image.jpg" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="9"></i>
+                </button>
+            </form>
+                </div>
+                <h5>The Roseate New Delhi
+                    <br>
+                    <div class="subtitle">New Delhi, Delhi, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://res.cloudinary.com/simplotel/image/upload/x_0,y_215,w_4288,h_2412,c_crop,q_80,fl_progressive/w_600,h_337,f_auto,c_fit/pride-hotel-bengaluru/Hotel_Exterior_Bldg_qzx0kh" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="10"></i>
+                </button>
+            </form>
+                </div>
+                <h5>Shangri-La's Eros Hotel
+                    <br>
+                    <div class="subtitle">New Delhi, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://images.oyoroomscdn.com/uploads/hotel_image/193410/3cf9db4da352b1fd.jpg" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="11"></i>
+                </button>
+            </form>
+                </div>
+                <h5>Taj Exotica Goa
+                    <br>
+                    <div class="subtitle">Goa, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://www.gingerhotels.com/resourcefiles/hotelprofile/ginger-kochi-kalamassery-hotel.jpg?version=12172022122611" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="12"></i>
+                </button>
+            </form>
+                </div>
+                <h5>The Khyber Himalayan Resort and Spa
+                    <br>
+                    <div class="subtitle">Gulmarg, Kashmir, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://res.cloudinary.com/simplotel/image/upload/w_5000,h_3317/x_289,y_0,w_4422,h_3317,r_0,c_crop,q_80,fl_progressive/w_600,f_auto,c_fit/the-piccadily-lucknow/Lucknow_Suites,_The_Piccadily_Hotel,_Rooms_near_Lucknow_Airport_5" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="13"></i>
+                </button>
+            </form>
+                </div>
+                <h5>The Zuri White Sands Resort
+                    <br>
+                    <div class="subtitle">Goa, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXVUtG64cshFWiWAVDwOF5XUFe2I0qb6a5EQ&usqp=CAU" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="14"></i>
+                </button>
+            </form>
+                </div>
+                <h5>Hyatt Hyderabad Gachibowli
+                    <br>
+                    <div class="subtitle">Hyderabad, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://assets.cntraveller.in/photos/60ba1fb80f3a5367ec9fe634/master/w_1600%2Cc_limit/Dolce-by-Wyndham-Hanoi-Golden-Lake-2-866x828.jpg" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="15"></i>
+                </button>
+            </form>
+                </div>
+                <h5>Vivanta by Taj Trivandrum
+                    <br>
+                    <div class="subtitle">Trivandrum, Kerala, India</div>
+                </h5>
+            </li>
+        </div>
+    </div>
+    <div class="popular_song">
+        <div class="h4">
+            <h4>One Star Hotel</h4>
+            <div class="btn_s">
+                <i id="left_scroll" class="bi bi-arrow-left-short"></i>
+                <i id="right_scroll" class="bi bi-arrow-right-short"></i>
+            </div>
+        </div>
+        <div class="pop_song">
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://res.cloudinary.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2812,r_0,c_crop,q_90,fl_progressive/w_900,f_auto,c_fit/hablis-hotel-chennai/hablis_rooms_-_hablis_hotel_chennai_0" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
+                </button>
+            </form>
+                </div>
+                <h5> Sher Bagh
+                    <br>
+                    <div class="subtitle">Rajasthan, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://www.itchotels.com/content/dam/itchotels/in/umbrella/storii/hotels/storiishantimorada-goa/image/headmast/desktop/pool-day-shot.jpg" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                </button>
+            </form>
+                    <!-- change All id  -->
+                </div>
+                <h5>Vivanta by Taj Dal View Srinagar
+                    <br>
+                    <div class="subtitle">Srinagar, Jammu & Kashmir, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/347140554.jpg?k=3d1a8b46dd141cf45f36225afd042e561f56ed985c3278714793bb07075fc70b&o=&hp=1" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="9"></i>
+                </button>
+            </form>
+                </div>
+                <h5>lebua Resort Jaipur
+                    <br>
+                    <div class="subtitle">Jaipur, Rajasthan, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://static.toiimg.com/thumb/30282584/WelcomHotel-Bella-Vista.jpg?width=1200&height=900" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="10"></i>
+                </button>
+            </form>
+                </div>
+                <h5>The Leela Ambience Gurgaon
+                    <br>
+                    <div class="subtitle">Gurgaon, India </div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://thumbs.dreamstime.com/b/hotel-bed-room-21064950.jpg" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="11"></i>
+                
+                </div>
+                <h5> ITC Royal Gardenia
+                    <br>
+                    <div class="subtitle">Bengaluru, India</div>
+                </button>
+            </form>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/a1/9c/63/essentia-luxury-hotel.jpg?w=700&h=-1&s=1" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="12"></i>
+                </button>
+            </form>
+                </div>
+                <h5>ITC Mughal
+                    <br>
+                    <div class="subtitle">Agra, Uttar Pradesh, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqt6aFpkuL6YLxGreLC7NMxoK4yBKlMTcpSw&usqp=CAU" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="13"></i>
+                </button>
+            </form>
+                </div>
+                <h5>ITC Sonar
+                    <br>
+                    <div class="subtitle">Kolkata, West Bengal, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJtm9vs2NK2oBEOT2oFL5O8J2iIdSEVTq8RQ&usqp=CAU" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="14"></i>
+                </button>
+            </form>
+                </div>
+                <h5>Devi Garh
+                    <br>
+                    <div class="subtitle">Udaipur, Rajasthan, India</div>
+                </h5>
+            </li>
+            <li class="songItem">
+                <div class="img_play">
+                    <form action="hotel1.html"><button>
+                    <img class="hotelItem" src="https://r1imghtlak.mmtcdn.com/b365bfaa621411eb9ee30242ac110002.jpg?&output-quality=75&downsize=910:612&crop=910:612;0,35&output-format=jpg" alt="alan">
+                    <i class="bi playListPlay bi-play-circle-fill" id="15"></i>
+                </button>
+            </form>
+                </div>
+                <h5>Udaipur, Rajasthan, India
+                    <br>
+                    <div class="subtitle">Pune, India</div>
+                </h5>
+            </li>
+        </div>
+    </div>
+        <div class="main">
+        <div class="div6">
+            <h1 class="name1">Roomsy</h1>
+            <input type="text">
+            <select name="" id=""></select>
+
+            <p>Company</p>
+            <p>Jobs</p>
+            <p>Press</p>
+            <p>nvestor relations</p>
+        </div>
+        <div class="div7">
+            <p>Mobile apps -searching on the go</p>
+            <p>Roomsy Business studio</p>
+        </div>
+        <div class="div8">
+            <p>Help</p>
+            <p>Learn how Roomsy works</p>
+            <p>Teems and consitions</p>
+            <p>Kegal information</p>
+            <p>Do not sell my personal Information</p>
+            <p>Privacy notice</p>
+            <p>Cyber security</p>
+            <p>Coronavirus (COVID-19) travel advice</p>
+        </div>
+        <div class="div9">
+            <p>want to recive exclisive accommodation offers? Subscribe to our newslatter.</p>
+            <div class="search1">
+                <i class="bi bi-search1"></i>
+            <input type="text" name="" placeholder="enter name" id="">
+        </div >
+        <form action="subscribe.html">
+        <button class="btn3">Subscribe</button>
+    </form>
+        </div>
+             <div class="div10">
+            <p>Roomsy N.V., Kesselstraße 5 – 7, 40221 Düsseldorf, Germany
+                Copyright 2022 Roomsy | All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+</body>
+</html>
